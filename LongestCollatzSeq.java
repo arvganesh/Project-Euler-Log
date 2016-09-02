@@ -40,6 +40,7 @@ public class LongestCollatzSeq {
         int largeI = 0;
         int tempLen = 0;
         int i = 0;
+        // 999168 is because of previous test cases.
         for (i = 999168; i >= 1; i --) {
 
             tempLen = collatzNum(i);
