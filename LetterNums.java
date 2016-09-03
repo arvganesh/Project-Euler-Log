@@ -63,11 +63,9 @@ public class LetterNums {
 
         if (str.length() == 1) {
             // returning the single digit numbers
-            a = str.charAt(0);
-            numValA = Character.getNumericValue(a);
-            strA = array[numValA];
             return array[n];
         }
+        // for two digit numbers
         if (str.length() == 2) {
             a = str.charAt(0);
             numValA = Character.getNumericValue(a);
@@ -77,6 +75,7 @@ public class LetterNums {
             strB = array[numValB];
             numValB2 = numValB*10;
             numValA2 = numValA*10;
+            int numValX = numValA2 + numValB;
             if (n % 10 == 0) {
                 return array[numValA2];
             }
@@ -87,6 +86,7 @@ public class LetterNums {
                 return array[numValA2] + strB;
             }
         }
+        // for 3 digit numbers
         if (str.length() == 3) {
             a = str.charAt(0);
             numValA = Character.getNumericValue(a);
@@ -107,18 +107,22 @@ public class LetterNums {
             else if (b == '0') {
                 return strA + "hundredand" + strC;
             }
+            else if (b == '1') {
+                return strA + "hundredand" + array[numValB2 + numValC];
+            }
             else {
-                return strA + "hundredand " + array[numValB2] +  strC;
+                return strA + "hundredand" + array[numValB2] +  strC;
             }
                 
         }
+        // return 1000
         if (str.length() == 4) {
             return "onethousand";
         }
 
         return "there was an issue: please debug!";
     }
-
+    // get the sum of a string(str), add the amount of characters to add, after all has been added, return add.
     public static int wordSum(int n) {
         int add = 0;
         int len = 0;
@@ -130,7 +134,8 @@ public class LetterNums {
     }
 
     public static void main(String[] args) {
-            System.out.println("Ans: " + wordSum(5));
+        // for (int i = 1; i < 1001; i++) - for checking if the numbers in the sequence were correct
+            System.out.println("Ans: " + wordSum(1000));
         
     }
 
