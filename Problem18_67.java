@@ -20,10 +20,11 @@ public class problem18 {
 
     public static void main(String[] args) throws IOException {
         ArrayList<ArrayList> arrList = new ArrayList<>();
+        // Inside the Filereader to the right, just add in your text file with path. Mine was named "triangle.txt"
         try (BufferedReader br = new BufferedReader(new FileReader("/home/arvganesh/Desktop/triangle.txt"))) {
 
             String line;
-
+            // Adding each row into a separate int array and adding that to an arraylist of arraylists.
             while ((line = br.readLine()) != null) {
                 ArrayList<Integer> intList = new ArrayList<>();
                 if (!line.equals("")) {
@@ -34,15 +35,13 @@ public class problem18 {
                 }
                 arrList.add(intList);
             }
-            //System.out.println(arrList);
-            int arrIndexLength = 0;
-            int ans = 0;
+            
 
             int sumOfNumbers = 0;
 
-            for (int i = arrList.size() - 1; i >= 1; i--) {
+            for (int i = arrList.size() - 1; i >= 1; i--) { // The row
                 ArrayList<Integer> tempStorage = new ArrayList<Integer>();
-                for (int x = 0; x < arrList.get(i).size() - 1; x++) {
+                for (int x = 0; x < arrList.get(i).size() - 1; x++) { // The element in the row
                     int num1 = (int) arrList.get(i).get(x);
                     int num2 = (int) arrList.get(i).get(x + 1);
                     int num3 = (int) arrList.get(i - 1).get(x);
@@ -54,13 +53,13 @@ public class problem18 {
                         sumOfNumbers = num2 + num3;
                         tempStorage.add(sumOfNumbers);
                     }
-                    if (arrList.size() == 1) {
+                    if (arrList.size() == 1) { // When you are at the last number
                         arrList.get(0).set(0, (int) arrList.get(0).get(0) + getMax((int) arrList.get(1).get(0), (int) arrList.get(1).get(1)));
                         arrList.remove(1);
                     }
 
                 }
-
+                
                 arrList.remove(i);
                 arrList.remove(i - 1);
                 arrList.add(tempStorage);
