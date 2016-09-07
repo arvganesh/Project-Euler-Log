@@ -11,13 +11,19 @@ import java.util.ArrayList;
  */
 public class problem18 {
 
+    public static Integer getMax(int n, int m) {
+        if (m > n) {
+            return m;
+        }
+        return n;
+    }
+
     public static void main(String[] args) throws IOException {
         ArrayList<ArrayList> arrList = new ArrayList<>();
         try (BufferedReader br = new BufferedReader(new FileReader("/home/arvganesh/Desktop/triangle.txt"))) {
 
             String line;
 
-            
             while ((line = br.readLine()) != null) {
                 ArrayList<Integer> intList = new ArrayList<>();
                 if (!line.equals("")) {
@@ -29,42 +35,41 @@ public class problem18 {
                 arrList.add(intList);
             }
             //System.out.println(arrList);
-            int arrIndexLength = arrList.size() - 1;
+            int arrIndexLength = 0;
             int ans = 0;
 
-            while (arrList.size() != 1) {
+            int sumOfNumbers = 0;
 
-                int sumOfNumbers = 0;
+            for (int i = arrList.size() - 1; i >= 1; i--) {
                 ArrayList<Integer> tempStorage = new ArrayList<Integer>();
-                for (int i = arrIndexLength; i > 0; i--) {
-                    for (int x = 0; x < (arrList.get(i).size()); x++) {
-                        int num1 = (int) arrList.get(i).get(x);
-                        int num2 = (int) arrList.get(i).get(x + 1);
-                        int num3 = (int) arrList.get(i - 1).get(x);
+                for (int x = 0; x < arrList.get(i).size() - 1; x++) {
+                    int num1 = (int) arrList.get(i).get(x);
+                    int num2 = (int) arrList.get(i).get(x + 1);
+                    int num3 = (int) arrList.get(i - 1).get(x);
 
-                        if (num1 > num2) {
-                            sumOfNumbers = num1 + num3;
-                            tempStorage.add(sumOfNumbers);
-                        } else {
-                            sumOfNumbers = num2 + num3;
-                            tempStorage.add(sumOfNumbers);
-                        }
-
+                    if (num1 > num2) {
+                        sumOfNumbers = num1 + num3;
+                        tempStorage.add(sumOfNumbers);
+                    } else {
+                        sumOfNumbers = num2 + num3;
+                        tempStorage.add(sumOfNumbers);
                     }
-                    if (i == 1) {
-                        arrList.remove(i);
-                        arrList.remove(i - 1);
-                        arrList.add(tempStorage);
+                    if (arrList.size() == 1) {
+                        arrList.get(0).set(0, (int) arrList.get(0).get(0) + getMax((int) arrList.get(1).get(0), (int) arrList.get(1).get(1)));
+                        arrList.remove(1);
                     }
-                    
 
                 }
 
+                arrList.remove(i);
+                arrList.remove(i - 1);
+                arrList.add(tempStorage);
+                
             }
 
         }
 
-        System.out.println(arrList);
+        System.out.println(arrList.get(0).get(0));
     }
 
 }
