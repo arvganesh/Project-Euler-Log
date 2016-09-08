@@ -16,28 +16,25 @@ import java.util.Locale;
  *
  * @author arvin_000
  */
-public class NumberofSundays {
+public class Problem19 {
 
     public static String getDate(Integer day, Integer month, Integer year) {
 
         DateTimeFormatter formatter = DateTimeFormatter.ofPattern("d/M/yyyy");
         LocalDate date = LocalDate.parse(day + "/" + month + "/" + year, formatter); // LocalDate = 2010-02-23
         DayOfWeek dow = date.getDayOfWeek();  // Extracts a `DayOfWeek` enum object.
-        String output = dow.getDisplayName(TextStyle.SHORT, Locale.US); // String = Tue
+        String output = dow.getDisplayName(TextStyle.FULL_STANDALONE, Locale.US); // String = Tue
         return output;
     }
 
     public static int getSundays() {
         int count = 0;
-        for (int y = 1901; y < 2001; y++) {
-            for (int m = 1; m < 13; m++) {
-                YearMonth yearMonthObject = YearMonth.of(y, m);
-                int daysInMonth = yearMonthObject.lengthOfMonth();
-                for (int d = 1; d <= daysInMonth; d++) {
-                    if (getDate(d, m, y).equals("Sun")) {
-                        count++;
-                    }
+        for (int y = 1901; y <= 2000; y++) {
+            for (int m = 1; m <= 12; m++) {
+                if (getDate(1, m, y).equals("Sunday")) {
+                    count++;
                 }
+
             }
         }
         return count;
@@ -45,6 +42,8 @@ public class NumberofSundays {
 
     public static void main(String[] args) {
         System.out.println(getSundays());
+
     }
 
 }
+
