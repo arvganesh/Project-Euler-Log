@@ -1,3 +1,0 @@
-Pseudo Code:
-There are n rows.
-For row n, check each number. If the number is the 1st element of the array or the last element, add the element of row n, to the corresponding element of row n - 1. Add that value to a variable(p). Else, check if the sum of next number(k) in the row n. Check if list[k] + list[element - 1] or list[element] is greater than the original variable(p). If it is, set p = to that number, other wise, keep checking. Add the greatest sum of elements to the 1st row number. Keep repeating this process until you find that there are only 2 rows left. Then, add the bigger number to the 1st rows number. 
