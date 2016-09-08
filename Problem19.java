@@ -19,7 +19,7 @@ import java.util.Locale;
 public class Problem19 {
 
     public static String getDate(Integer day, Integer month, Integer year) {
-
+        // Gets Day Of the Week for a date. ex: "Monday", "Tuesday"
         DateTimeFormatter formatter = DateTimeFormatter.ofPattern("d/M/yyyy");
         LocalDate date = LocalDate.parse(day + "/" + month + "/" + year, formatter); // LocalDate = 2010-02-23
         DayOfWeek dow = date.getDayOfWeek();  // Extracts a `DayOfWeek` enum object.
@@ -29,10 +29,10 @@ public class Problem19 {
 
     public static int getSundays() {
         int count = 0;
-        for (int y = 1901; y <= 2000; y++) {
-            for (int m = 1; m <= 12; m++) {
-                if (getDate(1, m, y).equals("Sunday")) {
-                    count++;
+        for (int y = 1901; y <= 2000; y++) { // Years
+            for (int m = 1; m <= 12; m++) { // Months
+                if (getDate(1, m, y).equals("Sunday")) { // getDate format is in date/month/year. Problem asks to find how many Sundays on the 1st of the month between the two.
+                    count++; // count of sundays.
                 }
 
             }
