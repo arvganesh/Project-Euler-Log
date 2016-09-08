@@ -12,3 +12,5 @@ Favorite Text Editor: Atom
 Favorite Language: Java
 
 Age: 13
+
+Friend Code (On Project Euler): 1012923_m9ZPQ3OUJUBLxJJUtwXa99wZmkdcvDWu
