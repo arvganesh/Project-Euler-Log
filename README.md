@@ -1,9 +1,9 @@
 # Project-Euler-Log
 This is my code for project euler! 
 
-Total Solved: 24 Problems.
+Total Solved: 26 Problems.
 
-Next Goal: 25
+Next Goal: 30
 
 Favorite IDE: Netbeans
 
