@@ -9,7 +9,7 @@ Favorite IDE: Netbeans
 
 Favorite Text Editor: Atom
 
-Favorite Language: Java
+Learning: Python, Java
 
 Age: 13
 
