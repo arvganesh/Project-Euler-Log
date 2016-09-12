@@ -13,34 +13,19 @@ def isPrime(n):
         if (n % i == 0):
             return False
     return True
-n = 0
-rangeOfPrimes = 0
-lst = []
-lst.append(0)
-maxprimerng = 0
-"""
-for a in range(-1000, 1000):
-    for b in range(-1000, 1001):
-        isPrimeChk = isPrime(getQuadNum(n, a, b))
-        if(isPrimeChk):
-            n += 1
-            rangeOfPrimes += 1
-            if rangeOfPrimes > maxprimerng:
-                #lst.pop(0)
-                #lst.append(rangeOfPrimes)
-                maxprimerng = rangeOfPrimes
-        else:
-            if (rangeOfPrimes > 40):
-                print rangeOfPrimes, "a: " + str(a), "b: " + str(b)
-                print "maxprimerng: " + str(maxprimerng)
-            if (rangeOfPrimes == 1001):
-                print "a: " + str(a), "b: " + str(b)
-            rangeOfPrimes = 0
-            continue
 
-"""
-while isPrime(getQuadNum(n, -1000, 2)):
-    print getQuadNum(n, -1000, 2)
-    n += 1
-    print n
-#print rangeOfPrimes
+nMax = 0
+aMax = 0
+bMax = 0
+for a in range(-1000, 1001):
+    for b in range(-1000, 1001):
+        n = 0
+        while isPrime(math.fabs(getQuadNum(n, a, b))):
+            n += 1
+        if n > nMax:
+            nMax = n
+            aMax = a
+            bMax = b
+
+
+print "n: " + str(nMax) + " a: " + str(aMax) + " b: " + str(bMax) + " ans: " + str(aMax*bMax)
