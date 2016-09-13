@@ -5,7 +5,7 @@ def getTriangleNum(n): # Nth Triangular Number.
          lst.append(trinum)
     return lst
 
-
+# Credit to Alex Koren for lines 9 - 12
 input_file = open("words.txt") # Reads File "words.txt", from project directory.
 text = input_file.read()
 text.replace('','') # replaces the commas.
