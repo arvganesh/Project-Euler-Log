@@ -1,13 +1,13 @@
 # Project-Euler-Log
 This is my code for project euler! 
 
-Total Solved: 39 Problems.
+Total Solved: 40 Problems!!!!!!!!!!!!!!!!!!!!!
 
-Next Goal: 40
+Next Goal: 50 Problems 
 
 Longer Term Goal: Finishing 100
 
-Favorite IDE: Netbeans
+Favorite IDE: Netbeans, Pycharm
 
 Favorite Text Editor: Atom
 
