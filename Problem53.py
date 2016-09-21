@@ -3,7 +3,6 @@ def nCr(n,r):
     f = math.factorial
     return f(n) / f(r) / f(n-r)
 
-r = 1
 count = 0
 
 for n in xrange(1, 101):
