@@ -5,7 +5,7 @@ Total Solved: 69 Problems
 
 Next Goal: 70 Problems 
 
-Longer Term Goal: Finishing 100
+Longer Term Goal: Finishing 100, Will be getting Mac Book Pro at 100. And then I will be focused on machine learning.
 
 Favorite IDE: Netbeans, Pycharm
 
