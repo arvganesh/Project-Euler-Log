@@ -1,16 +1,5 @@
 import random
 def m_r(n):
-    """
-    Check n for primalty:  Example:
-
-    >miller_rabin(162259276829213363391578010288127)    #Mersenne prime #11
-    True
-
-    Algorithm & Python source:
-
-http://en.literateprograms.org/Miller-Rabin_primality_test_(Python)
-
-    """
     d = n - 1
     s = 0
     while d % 2 == 0:
