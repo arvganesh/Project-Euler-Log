@@ -34,22 +34,13 @@ def miller_rabin_pass(a, s, d, n):
         a_to_power = (a_to_power * a_to_power) % n
     return a_to_power == n - 1
 
-def eraSieve(n):
-    sieve=[True]*(n+1)
-    sieve[:2] = [False, False]
-    sqrt = int(n**.5)+1
-    for x in xrange(2, sqrt):
-        if sieve[x]:
-            sieve[2*x::x]=[False]*(n/x-1)
-    return sieve
-
-def diagonalNum(n): # n is the number of row
+def diagonalNum(): # n is the number of row
     increment = 2
     getDiaNum = 1
-    limit = (n-1)/2
+    #limit = (n-1)/2
     sideLen = 1.0
     c = 0.0
-    for i in xrange(1, limit + 1):
+    while True:
         count = 1
         while count <= 4:
             getDiaNum += increment
@@ -58,12 +49,7 @@ def diagonalNum(n): # n is the number of row
             count += 1
         increment += 2
         sideLen += 4
-    return c / sideLen
-
-#print diagonalNum(7)
-
-for x in xrange(26230, 100000):
-    ratio = diagonalNum(x)
-    if ratio < 0.10:
-        break
-print x
+        if c / sideLen < 0.10:
+            return increment - 1 # Gets row amount.
+            
+print diagonalNum()
