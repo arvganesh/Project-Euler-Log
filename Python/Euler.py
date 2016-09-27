@@ -48,7 +48,7 @@ def sof_digits(n):
 def fibonacci(n):
     """
     Find the nth number in the Fibonacci series.  Example:
-    
+
     >>>fibonacci(100)
     354224848179261915075
 
@@ -190,7 +190,7 @@ def trial_division(n, bound=None):
 def gcd(a, b):
     """
     Compute the greatest common divisor of a and b. Examples:
-    
+
     >>> gcd(14, 15)    #co-prime
     1
     >>> gcd(5*5, 3*5)
@@ -199,7 +199,7 @@ def gcd(a, b):
     if a < 0:  a = -a
     if b < 0:  b = -b
     if a == 0: return b
-    while b != 0: 
+    while b != 0:
         a, b = b, a%b
     return a
 
@@ -211,7 +211,7 @@ def gcd(a, b):
 def binomial(n, k):
     """
     Calculate C(n,k), the number of ways can k be chosen from n. Example:
-    
+
     >>>binomial(30,12)
     86493225
     """
@@ -226,7 +226,7 @@ def binomial(n, k):
 def catalan_number(n):
     """
     Calculate the nth Catalan number. Example:
-    
+
     >>>catalan_number(10)
     16796
     """
@@ -241,7 +241,7 @@ def catalan_number(n):
 def prime_sieve(n):
     """
     Return a list of prime numbers from 2 to a prime < n. Very fast (n<10,000,000) in 0.4 sec.
-    
+
     Example:
     >>>prime_sieve(25)
     [2, 3, 5, 7, 11, 13, 17, 19, 23]
