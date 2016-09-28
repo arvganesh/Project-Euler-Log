@@ -1,9 +1,9 @@
 # Project-Euler-Log
 This is my code for project euler! 
 
-Total Solved: 74 Problems
+Total Solved: 75 Problems
 
-Next Goal: 75 Problems 
+Next Goal: 80 Problems 
 
 Longer Term Goal: Finishing 100, Will be getting Mac Book Pro at 100. And then I will be focused on machine learning.
 
