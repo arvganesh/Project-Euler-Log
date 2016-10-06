@@ -1,5 +1,3 @@
-from decimal import *
-getcontext().prec = 100
 def isRational(n):
     n = n ** 0.5
     if int(n) == n:
