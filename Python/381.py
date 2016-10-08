@@ -29,7 +29,7 @@ def s(p):
 	# = (p-1)! * 3 / 8
 	# = -1 * 3 / 8  (by Wilson's theorem)
 	# = -3/8 mod p.
-	# Every part of the equation is modulo a prime p > 4.
+	# Every part of the equation is modulo a prime p > 4
 	return (p - 3) * reciprocal_mod(8 % p, p) % p
 
 psieve = prime_sieve(10 ** 8)
