@@ -1,4 +1,4 @@
-# Project-Euler-Log
+# Project-Euler
 This is my code for project euler!
 
 Total Solved: 88 Problems
