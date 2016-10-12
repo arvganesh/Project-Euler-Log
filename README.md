@@ -1,11 +1,11 @@
 # Project-Euler
 This is my code for project euler!
 
-Total Solved: 99 Problems
+Total Solved: 100 Problems
 
-Next Goal: 100 Problems
+Next Goal: 110 Problems
 
-Longer Term Goal: Finishing 100, Will be getting Mac Book Pro at 100. And then I will be focused on machine learning.
+Longer Term Goal: WASUP BOIII FINISHED 100 WOOOO HIGH-FIVES ALL AROUND YEEEEEEEEEEEEEEET
 
 Favorite IDE: Netbeans, Pycharm
 
@@ -15,8 +15,10 @@ Learning: Python(2.7.6) , Java, Ruby
 
 Age: 13
 
-OS: Ubuntu 14.04 LTS
+OS: Ubuntu 14.04 LTS(OS X Sierra soon!)
 
 Friend Code (On Project Euler): 1012923_m9ZPQ3OUJUBLxJJUtwXa99wZmkdcvDWu
 
 btw i use git :P
+
+FINISHED 100 PROBLEMS sdliuf hg ikuw3s4tygqw8 34tgfwkuefgwi37846t5wi384t7w3ltw34/tgw3jgwo3e84gyws3l
