@@ -1,7 +1,7 @@
 # Project-Euler
 This is my code for project euler!
 
-Total Solved: 100 Problems
+Total Solved: 101 Problems
 
 Next Goal: 110 Problems
 
