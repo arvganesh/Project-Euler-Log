@@ -13,8 +13,6 @@ Favorite Text Editor: Atom
 
 Learning: Python(2.7.6) , Java, Ruby
 
-Age: 14
-
 OS: OS X Sierra
 
 Friend Code (On Project Euler): 1012923_m9ZPQ3OUJUBLxJJUtwXa99wZmkdcvDWu
